@@ -82,13 +82,24 @@ namespace UserRegistrationNUnitTest
         }
         public void PasswordRule2RegexReturnTrue()
         {
-            bool result = userRegex.PasswordRule1Regex("ad$$&didDdsfsn41");
+            bool result = userRegex.PasswordRule2Regex("ad$$&didDdsfsn41");
             Assert.IsTrue(result);
         }
         [Test]
         public void PasswordRule2RegexReturnFalse()
         {
-            bool result = userRegex.PasswordRule1Regex("ad$$&di");
+            bool result = userRegex.PasswordRule2Regex("ad$$&di");
+            Assert.IsFalse(result);
+        }
+        public void PasswordRule3RegexReturnTrue()
+        {
+            bool result = userRegex.PasswordRule3Regex("ad$$&did3Ddsfsn");
+            Assert.IsTrue(result);
+        }
+        [Test]
+        public void PasswordRule3RegexReturnFalse()
+        {
+            bool result = userRegex.PasswordRule3Regex("ad$$&didDdsfsn");
             Assert.IsFalse(result);
         }
     }
