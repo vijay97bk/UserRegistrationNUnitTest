@@ -80,5 +80,16 @@ namespace UserRegistrationNUnitTest
             bool result = userRegex.PasswordRule1Regex("Admin@1");
             Assert.IsFalse(result);
         }
+        public void PasswordRule2RegexReturnTrue()
+        {
+            bool result = userRegex.PasswordRule1Regex("ad$$&didDdsfsn41");
+            Assert.IsTrue(result);
+        }
+        [Test]
+        public void PasswordRule2RegexReturnFalse()
+        {
+            bool result = userRegex.PasswordRule1Regex("ad$$&di");
+            Assert.IsFalse(result);
+        }
     }
 }
