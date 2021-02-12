@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mI/FhYTBLMWs0Eqk76HCHvDLOYRICh3Zi7sOwKOu8cGv/8K5pdg+P5hMLFb1Iybic7YUdtWyKnV2RsCKKECXdQ==",
+  "dgSpecHash": "tarCguXMqunqoynNpmG20jm6KSfMjkpA2blKxnzl56U33QA09QOjMU3sfqSrR8NBWOYtFXBmrONutuxwWeVeug==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Vijay Kshirasagar\\Desktop\\C# Work\\UserRegistrationNUnitTest\\UserRegistrationNUnitTest\\UserRegistrationNUnitTest.csproj",
+  "projectFilePath": "C:\\Users\\Vijay Kshirasagar\\Desktop\\C# Work\\UserRegistrationNUnitTest\\NunitTestUserRegistration\\NunitTestUserRegistration.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Vijay Kshirasagar\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",
     "C:\\Users\\Vijay Kshirasagar\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",

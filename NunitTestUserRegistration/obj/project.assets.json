@@ -11,7 +11,8 @@
           "lib/netcoreapp1.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll": {}
         },
         "build": {
-          "build/netstandard1.0/_._": {}
+          "build/netstandard1.0/Microsoft.CodeCoverage.props": {},
+          "build/netstandard1.0/Microsoft.CodeCoverage.targets": {}
         }
       },
       "Microsoft.CSharp/4.0.1": {
@@ -67,10 +68,11 @@
           "Microsoft.TestPlatform.TestHost": "16.5.0"
         },
         "build": {
-          "build/netcoreapp2.1/_._": {}
+          "build/netcoreapp2.1/Microsoft.NET.Test.Sdk.props": {},
+          "build/netcoreapp2.1/Microsoft.NET.Test.Sdk.targets": {}
         },
         "buildMultiTargeting": {
-          "buildMultiTargeting/_._": {}
+          "buildMultiTargeting/Microsoft.NET.Test.Sdk.props": {}
         }
       },
       "Microsoft.NETCore.Platforms/1.1.0": {
@@ -327,7 +329,7 @@
           }
         },
         "build": {
-          "build/netcoreapp2.1/_._": {}
+          "build/netcoreapp2.1/Microsoft.TestPlatform.TestHost.props": {}
         }
       },
       "Microsoft.Win32.Primitives/4.3.0": {
@@ -379,7 +381,7 @@
           "lib/netstandard1.0/_._": {}
         },
         "build": {
-          "build/netstandard2.0/_._": {}
+          "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
       "Newtonsoft.Json/9.0.1": {
@@ -436,7 +438,7 @@
           "lib/netstandard2.0/nunit.framework.dll": {}
         },
         "build": {
-          "build/_._": {}
+          "build/NUnit.props": {}
         }
       },
       "NUnit3TestAdapter/3.16.1": {
@@ -453,7 +455,7 @@
           "System.Xml.XmlDocument": "4.3.0"
         },
         "build": {
-          "build/netcoreapp2.1/_._": {}
+          "build/netcoreapp2.1/NUnit3TestAdapter.props": {}
         }
       },
       "runtime.native.System/4.3.0": {
@@ -1222,21 +1224,6 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
-        }
-      },
-      "NunitTestUserRegistration/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "dependencies": {
-          "Microsoft.NET.Test.Sdk": "16.5.0",
-          "NUnit": "3.12.0",
-          "NUnit3TestAdapter": "3.16.1"
-        },
-        "compile": {
-          "bin/placeholder/NunitTestUserRegistration.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/NunitTestUserRegistration.dll": {}
         }
       }
     }
@@ -4626,16 +4613,13 @@
         "system.xml.xpath.xmldocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xmldocument.nuspec"
       ]
-    },
-    "NunitTestUserRegistration/1.0.0": {
-      "type": "project",
-      "path": "../NunitTestUserRegistration/NunitTestUserRegistration.csproj",
-      "msbuildProject": "../NunitTestUserRegistration/NunitTestUserRegistration.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "NunitTestUserRegistration >= 1.0.0"
+      "Microsoft.NET.Test.Sdk >= 16.5.0",
+      "NUnit >= 3.12.0",
+      "NUnit3TestAdapter >= 3.16.1"
     ]
   },
   "packageFolders": {
@@ -4644,11 +4628,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Vijay Kshirasagar\\Desktop\\C# Work\\UserRegistrationNUnitTest\\UserRegistrationNUnitTest\\UserRegistrationNUnitTest.csproj",
-      "projectName": "UserRegistrationNUnitTest",
-      "projectPath": "C:\\Users\\Vijay Kshirasagar\\Desktop\\C# Work\\UserRegistrationNUnitTest\\UserRegistrationNUnitTest\\UserRegistrationNUnitTest.csproj",
+      "projectUniqueName": "C:\\Users\\Vijay Kshirasagar\\Desktop\\C# Work\\UserRegistrationNUnitTest\\NunitTestUserRegistration\\NunitTestUserRegistration.csproj",
+      "projectName": "NunitTestUserRegistration",
+      "projectPath": "C:\\Users\\Vijay Kshirasagar\\Desktop\\C# Work\\UserRegistrationNUnitTest\\NunitTestUserRegistration\\NunitTestUserRegistration.csproj",
       "packagesPath": "C:\\Users\\Vijay Kshirasagar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Vijay Kshirasagar\\Desktop\\C# Work\\UserRegistrationNUnitTest\\UserRegistrationNUnitTest\\obj\\",
+      "outputPath": "C:\\Users\\Vijay Kshirasagar\\Desktop\\C# Work\\UserRegistrationNUnitTest\\NunitTestUserRegistration\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Vijay Kshirasagar\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4664,11 +4648,7 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {
-            "C:\\Users\\Vijay Kshirasagar\\Desktop\\C# Work\\UserRegistrationNUnitTest\\NunitTestUserRegistration\\NunitTestUserRegistration.csproj": {
-              "projectPath": "C:\\Users\\Vijay Kshirasagar\\Desktop\\C# Work\\UserRegistrationNUnitTest\\NunitTestUserRegistration\\NunitTestUserRegistration.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -4680,6 +4660,20 @@
     "frameworks": {
       "netcoreapp3.1": {
         "targetAlias": "netcoreapp3.1",
+        "dependencies": {
+          "Microsoft.NET.Test.Sdk": {
+            "target": "Package",
+            "version": "[16.5.0, )"
+          },
+          "NUnit": {
+            "target": "Package",
+            "version": "[3.12.0, )"
+          },
+          "NUnit3TestAdapter": {
+            "target": "Package",
+            "version": "[3.16.1, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
