@@ -38,8 +38,24 @@ namespace UserRegistrationNUnitTest
         [Test]
         public void LastNameReturnFalse()
         {
+            //act
             bool result = userRegex.LastNameRegex("rathod");
+            //Assert
             Assert.IsFalse(result);
         }
+        [Test]
+        public void EmailReturnTrue()
+        {
+            bool result = userRegex.EmailRegex("abc.xyz@bl.co.in");
+            Assert.IsTrue(result);
+        }
+        [Test]
+        public void EmailReturnFalse()
+        {
+            bool result = userRegex.EmailRegex("abc.xyz@bl.co.in1");
+            Assert.IsFalse(result);
+        }
+
+
     }
 }
