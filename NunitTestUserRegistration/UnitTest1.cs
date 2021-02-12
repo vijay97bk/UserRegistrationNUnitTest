@@ -56,6 +56,17 @@ namespace UserRegistrationNUnitTest
             Assert.IsFalse(result);
         }
 
-
+        [Test]
+        public void MobileNumberRegexReturnTrue()
+        {
+            bool result = userRegex.MobileNumberRegex("91 7756994045");
+            Assert.IsTrue(result);
+        }
+        [Test]
+        public void MobileNumberRegexReturnFalse()
+        {
+            bool result = userRegex.MobileNumberRegex("91+ 7756994045");
+            Assert.IsFalse(result);
+        }
     }
 }
