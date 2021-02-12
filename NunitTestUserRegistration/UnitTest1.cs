@@ -68,5 +68,17 @@ namespace UserRegistrationNUnitTest
             bool result = userRegex.MobileNumberRegex("91+ 7756994045");
             Assert.IsFalse(result);
         }
+        [Test]
+        public void PasswordRule1RegexReturnTrue()
+        {
+            bool result = userRegex.PasswordRule1Regex("Admin@12&3$&");
+            Assert.IsTrue(result);
+        }
+        [Test]
+        public void PasswordRule1RegexReturnFalse()
+        {
+            bool result = userRegex.PasswordRule1Regex("Admin@1");
+            Assert.IsFalse(result);
+        }
     }
 }
