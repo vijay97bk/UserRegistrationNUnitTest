@@ -69,7 +69,7 @@ namespace UserRegistrationNUnitTest
             Assert.IsFalse(result);
         }
         [Test]
-        public void PasswordRule1RegexReturnTrue()
+        public void PasswordRule1RegexReturnTrue()//Minimum 8 charachter
         {
             bool result = userRegex.PasswordRule1Regex("Admin@12&3$&");
             Assert.IsTrue(result);
@@ -80,7 +80,8 @@ namespace UserRegistrationNUnitTest
             bool result = userRegex.PasswordRule1Regex("Admin@1");
             Assert.IsFalse(result);
         }
-        public void PasswordRule2RegexReturnTrue()
+        [Test]
+        public void PasswordRule2RegexReturnTrue()//atleast 1 uppercase character-all rules passed
         {
             bool result = userRegex.PasswordRule2Regex("ad$$&didDdsfsn41");
             Assert.IsTrue(result);
@@ -91,7 +92,8 @@ namespace UserRegistrationNUnitTest
             bool result = userRegex.PasswordRule2Regex("ad$$&di");
             Assert.IsFalse(result);
         }
-        public void PasswordRule3RegexReturnTrue()
+        [Test]
+        public void PasswordRule3RegexReturnTrue()//atleast 1 numeric number 
         {
             bool result = userRegex.PasswordRule3Regex("ad$$&did3Ddsfsn");
             Assert.IsTrue(result);
@@ -100,6 +102,18 @@ namespace UserRegistrationNUnitTest
         public void PasswordRule3RegexReturnFalse()
         {
             bool result = userRegex.PasswordRule3Regex("ad$$&didDdsfsn");
+            Assert.IsFalse(result);
+        }
+        [Test]
+        public void PasswordRule4RegexReturnTrue()//exactly 1 special character
+        {
+            bool result = userRegex.PasswordRule4Regex("aff&sdfA9");
+            Assert.IsTrue(result);
+        }
+        [Test]
+        public void PasswordRule4RegexReturnFalse()
+        {
+            bool result = userRegex.PasswordRule4Regex("affsdfA9");
             Assert.IsFalse(result);
         }
     }
