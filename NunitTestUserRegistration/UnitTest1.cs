@@ -17,13 +17,13 @@ namespace UserRegistrationNUnitTest
         [Test]
         public void FirstNameReturnTrue()
         {
-            bool result = userRegex.FirstNameRegex("Dilip");
+            bool result = userRegex.FirstNameRegex("Vijay");
             Assert.IsTrue(result);
         }
         [Test]
         public void FirstNameReturnFalse()
         {
-            bool result = userRegex.FirstNameRegex("dilip");
+            bool result = userRegex.FirstNameRegex("vijay");
             Assert.IsFalse(result);
         }
     }
