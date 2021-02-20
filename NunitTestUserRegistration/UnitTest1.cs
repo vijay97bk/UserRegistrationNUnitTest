@@ -20,26 +20,26 @@ namespace UserRegistrationNUnitTest
         [Test]
         public void FirstNameReturnTrue()
         {
-            bool result = userRegex.FirstNameRegex("Dilip");
+            bool result = userRegex.FirstNameRegex("Vijay");
             Assert.IsTrue(result);
         }
         [Test]
         public void FirstNameReturnFalse()
         {
-            bool result = userRegex.FirstNameRegex("dilip");
+            bool result = userRegex.FirstNameRegex("vijay");
             Assert.IsFalse(result);
         }
         [Test]
         public void LastNameReturnTrue()
         {
-            bool result = userRegex.LastNameRegex("Rathod");
+            bool result = userRegex.LastNameRegex("Kshirasagar");
             Assert.IsTrue(result);
         }
         [Test]
         public void LastNameReturnFalse()
         {
             //act
-            bool result = userRegex.LastNameRegex("rathod");
+            bool result = userRegex.LastNameRegex("kshirasagar");
             //Assert
             Assert.IsFalse(result);
         }
@@ -59,7 +59,7 @@ namespace UserRegistrationNUnitTest
         [Test]
         public void MobileNumberRegexReturnTrue()
         {
-            bool result = userRegex.MobileNumberRegex("91 7756994045");
+            bool result = userRegex.MobileNumberRegex("91 9876543210");
             Assert.IsTrue(result);
         }
         [Test]
